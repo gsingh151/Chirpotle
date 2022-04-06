@@ -1,0 +1,54 @@
+/* /////////////////// GLOBAL ////////////////// */
+html, body {width: 100%;height: 100%;margin: 0;background:#f0f0f0;font-size: 12px;}
+* {font-family: open sans, arial;}
+a {text-decoration: none;font-size: inherit;}
+a:visited {color: inherit; }
+a:hover {color: #ffa500; }
+input{background: rgba(51,51,51,0.5);color: #FFF;padding: 10px;border-radius: 5px;border:1px solid #FFF;margin: 5px 0px;}
+input:focus{color: #ffa500;}
+input[type=submit]{float: right;margin-left: 5px;}
+input[type=submit]:hover{background: #3088f0;}
+textarea{padding: 10px;border-radius: 5px;background: #FFF;color: #000;border: 1px solid #ffa500; resize: none;}
+textarea:focus{color: #ffa500;}
+
+/* /////////////////// Header ////////////////// */
+header{background: rgba(51, 51, 51, 0.5); padding: 10px;width: calc(100% - 20px);color: #FFF;position: absolute;display: flex;justify-content: space-between;}
+.logo {font-size: 25px;}
+.logo img {height: 35px;margin-left: 10px;}
+nav {float:right;font-size: 16px;}
+nav a{color: #FFF;padding: 5px;border-radius: 5px;}
+nav a:hover{background: #FFF;color: #333;}
+
+
+/* /////////////////// Footer ////////////////// */
+footer{background:#333;color:#fff;overflow: auto;padding:50px 0;}
+footer a {color: #fff;}
+footer a:hover {color: #ffa500;}
+.footer_wrapper{display:flex;justify-content:space-between;width:80%;margin:-25px auto 0 auto;padding-right:50px;}
+
+
+/* /////////////////// Index ////////////////// */
+.content {background-color: green; background: url('C:\xampp\htdocs\chirpotle\images\coconut.jpg') center;background-size: cover;overflow: auto;padding: 15% 100px;color: #FFF;display: flex;justify-content: space-between;}
+.benifit_wrapper{margin:0 20px;}
+.benifit1{font-size: 50px;}
+.benifit2{font-size: 22px;}
+.register input[type=text]{width: 200px;display: block;}
+.register input[type=password]{width: 200px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
