@@ -23,32 +23,29 @@
 </form>
 
 <?php
-if (isset($_POST['register'])){
+  if (isset($_POST['register'])){
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $database = "db_chirpotle";
+    $conn = mysqli_connect($host, $user, $password, $database);
+    $username = $_POST['username'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $password = md5($_POST['password']);
+    $sign_up_date = date('Y-m-d');
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "db_chirpotle";
-
-$conn = mysqli_connect($host, $user, $password, $database);
-
-  $username = $_POST['username'];
-  $first_name = $_POST['first_name'];
-  $last_name = $_POST['last_name'];
-  $email = $_POST['email'];
-  $password = md5($_POST['password']);
-  $sign_up_date = date('Y-m-d');
-
-  $verify = mysqli_query($conn, "SELECT * FROM `users` WHERE `email` = '$email'");
-  if ($mysqli_num_rows($verify) > 0){
-    echo "this user exists";
-  }else{
+    $verify = mysqli_query($conn, "SELECT * FROM `users` WHERE `email` = '$email'");
+    if (mysqli_num_rows($verify)>0){
+      echo "this user exists";
+    }else{
     echo "this user does not exist";
-    $sql = "INSERT INTO `users`(`username`, `password`, `first_name`, `last_name`, `email`, `sign_up_date`) VALUES ('$username', '$password', '$first_name', '$last_name', '$email', '$sign_up_date')";
-    $query = mysqli_query($conn, $sql);
-    echo "Username and Password Submitted!";
+      $sql = "INSERT INTO `users`(`username`, `password`, `first_name`, `last_name`, `email`, `sign_up_date`) VALUES ('$username', '$password', '$first_name', '$last_name', '$email', '$sign_up_date')";
+      $query = mysqli_query($conn, $sql);
+      echo "Username and Password Submitted!";
+    }
   }
-}
 ?>
 
 </div>
