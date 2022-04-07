@@ -24,11 +24,7 @@
 
 <?php
   if (isset($_POST['register'])){
-    $host = "localhost";
-    $user = "root";
-    $password = "";
-    $database = "db_chirpotle";
-    $conn = mysqli_connect($host, $user, $password, $database);
+
     $username = $_POST['username'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
